@@ -12,7 +12,6 @@ import "channels"
 //= require bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
-//= require tinymce-jquery
 
 Rails.start()
 Turbolinks.start()
