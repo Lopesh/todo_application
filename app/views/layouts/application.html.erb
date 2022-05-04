@@ -12,6 +12,11 @@
 
   <body>
     <% if user_signed_in? %>
+      <style type="text/css">
+        body{
+          background: #eee;
+        }
+      </style>
       <%= render "layouts/headers" %>
       <%= render "layouts/flash_messages"%>
     <% end %>

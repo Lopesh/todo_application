@@ -1,3 +1,4 @@
+<%= tinymce_assets %>
 <div class="container">
  <%= form_for @task  do |f| %>
   <div class="form-outline mb-4">
@@ -6,7 +7,8 @@
   </div>
   <div class="form-outline mb-4">
     <%= f.label :description, class: "form-label" %> 
-    <%= f.text_area :description, autocomplete: "last_name", class:"form-control" %>
+    <%= f.text_area :description, :class => "tinymce", :rows => 2, :cols => 12 %>
+    <%#= f.text_area :description, autocomplete: "last_name", class:"form-control" %>
   </div>
   <div class="form-outline mb-4 col-md-4">
     <%= f.label :deadline, class: "form-label" %>
@@ -21,7 +23,9 @@
   <% end %>
 
   <div class="pt-1 mb-5 pb-1">
-    <%= f.submit "Add Task", class: "btn btn-primary btn-block gradient-custom-2 mb-3 full-width" %>
+    <%= f.submit @task.new_record? ? "Add Task" : "Update Task", class: "btn btn-primary btn-block gradient-custom-2 mb-3 full-width" %>
     </div>
   <% end %>
 </div>
+<%= tinymce %>
+ 
