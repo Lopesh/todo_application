@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Tomorrow is the last day for the following task. please look into it on priority.</p>
+    <p>
+    Task details<br>
+    --------------------------
+    </p>
+    <p>Title: <%= @task.title %></p>
+    <p>Description: <%= @task.description %></p>
+    <p>status: <%= @task.status %></p> 
+    <%= @task&.deadline&.to_datetime&.strftime("%FT%R") %>
+  </body>
+</html>

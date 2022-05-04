@@ -1,0 +1,17 @@
+<div class="row">
+<% locals[:tasks].each do |task|%>
+  <div class="card mt-2" style="margin-left: 2px; margin-right: 2px;">
+    <h5 class="card-header"><%= task.title %></h5>
+    <div class="card-body">
+      <p class="card-text"><strong>Description: </strong><%= task.description.truncate(15) %></p>
+      <p class="card-text"><strong>Deadline: </strong><%= task.deadline || "N/A" %></p>
+      <div><!--<a href="<%#= task_path(task) %>" class="btn btn-outline-primary"><%#= fa_icon "eye", base: "circle", class: "fa-1x"
+
+%></a>--> <a class="btn btn-outline-dark" href="<%= edit_task_path(task)%>"><%= fa_icon "pencil", base: "circle", class: "fa-1x"
+
+%></a></div>
+
+    </div>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+<a class="btn btn-outline-secondary mb-3" href="<%= new_task_path %>" role="button" >Add New Task</a>
+<ul class="nav nav-pills nav-justified" id="taskTab" role="tablist">
+  <% 
+    task_statuses = Task.statuses
+    task_statuses.each do |key, value| %>
+      <%= add_navigation_tabs(key.parameterize.underscore, value==1) %>
+   <% end%>
+   
+</ul>
+
+<div class="tab-content">
+	<% task_statuses.each do |key, value| %> 
+      <%= add_navigation_tab_contents(key.parameterize.underscore, value==1) %>
+	<% end %>
+</div>
+
+<script>
+  var firstTabEl = document.querySelector('#taskTab li:last-child a')
+  var firstTab = new bootstrap.Tab(firstTabEl)
+
+  firstTab.show()
+</script>
+</div>
