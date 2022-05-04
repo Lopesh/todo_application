@@ -31,7 +31,7 @@ gem 'devise'
 gem 'bootstrap', '~> 5.1.3'
 gem "font-awesome-rails"
 gem 'whenever', require: false
-gem 'tinymce-rails'
+gem 'tinymce-rails', '~> 4.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
